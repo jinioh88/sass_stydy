@@ -1,0 +1,33 @@
+body {
+  background-color: #dddddd;
+}
+
+#box1 {
+  color: yellow;
+  background-color: blue;
+  width: 100px;
+}
+
+#box2 {
+  color: red;
+  background-color: blue;
+  width: 100px;
+}
+
+#box3 {
+  color: yellow;
+  background-color: blue;
+  width: 300px;
+}
+
+#box4 {
+  color: red;
+  background-color: blue;
+  width: 300px;
+}
+
+#box5 {
+  color: green;
+  background-color: blue;
+}
+/*# sourceMappingURL=vars.css.map */
