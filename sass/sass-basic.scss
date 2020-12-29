@@ -1,4 +1,13 @@
-// Nesting
+// Nmixin
+@mixin fontSizeBgColor($fontSize: 20px, $bgColor: #fff) {
+  font-size: $fontSize;
+  background-color: $bgColor;
+}
+
+@mixin linkStyle($textColor, $textDeco) {
+  color: $textColor;
+  text-decoration: $textDeco;
+}
 
 html {
   font-size: 18px;
@@ -20,8 +29,8 @@ a {
 }
 
 #box1 {
-  font-size: 40px;
-  background-color: #ffcccf;
+  @include fontSizeBgColor(40px, #ffcccf);
+
   box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
 
   &:hober {
@@ -40,11 +49,9 @@ a {
   }
 
   & > a {
-    color: #a22;
-    text-decoration: none;
+    @include linkStyle(#a22, none);
     &:hover {
-      color: #000;
-      text-decoration: underline;
+      @include linkStyle(#000, underline);
     }
   }
 
@@ -62,19 +69,16 @@ a {
 
 // box1안에 넣어도 되지만 코드가 길어지게 되면 부모가 뭔지 위로올려서 확인해봐야함...
 #box1 #box2 {
-  font-size: 20px;
-  background-color: #e9e9e9;
+  @include fontSizeBgColor(20px, #e9e9e9);
   border-radius: 20px;
   border: 3px solid red;
   box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
 
   & > a {
-    color: #ee6633;
-    text-decoration: none;
+    @include linkStyle(#ee6633, none);
 
     &:hover {
-      color: #a22;
-      text-decoration: underline;
+      @include linkStyle(#a22, underline);
     }
   }
 }
