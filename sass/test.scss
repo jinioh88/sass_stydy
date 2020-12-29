@@ -1,0 +1,6 @@
+
+@import "mixins";
+
+#test {
+  @include fontSizeBgColor(40px, #999);
+}
