@@ -1,0 +1,73 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
+
+$border-color: $color-blue;
+
+.box {
+  @include width-height-padding(300px, 300px, 20px);
+  @include pos-abs-center();
+
+  &,
+  &-inner {
+    border: 3px solid $border-color;
+  }
+
+  @include mq("phone") {
+    width: 100%;
+    border: none;
+  }
+
+  @include mq("tablet-land") {
+    border: 2px solid $border-color;
+  }
+
+  @include mq("desktop-big") {
+    width: 600px;
+    padding: 50px;
+    border: 3px solid $border-color;
+  }
+
+  &-inner {
+    @include width-height-padding(initial, 40px, 10px);
+
+    background-color: $color-grey;
+
+    @include mq("phone") {
+      font-size: 40px;
+    }
+
+    &-title {
+      font-size: 20px;
+      color: $color-white;
+      background-color: rgba($color-white, 0.5);
+      @include mq("phone") {
+        font-size: 40px;
+      }
+      @include mq("tablet-land") {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// desktop-big
+@media screen and (min-width: 1201px) {
+  .box-inner {
+    height: 50px;
+  }
+}
+
+// table-land
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  .box-inner {
+    height: 30px;
+  }
+}
+
+// phone
+@media screen and (max-width: 600px) {
+  .box-inner {
+    height: 10px;
+  }
+}
