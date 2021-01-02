@@ -1,0 +1,24 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: left;
+  }
+}
+
+.box-parent {
+  padding: 20px;
+  background-color: blue;
+
+  .box-child {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid yellow;
+    float: left;
+  }
+  .box-child:not(:last-child) {
+    margin-right: 40px;
+  }
+  @include clearfix();
+}
