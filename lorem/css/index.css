@@ -149,4 +149,49 @@ header #header-text-sub {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
+
+footer {
+  background-color: #3f4a56;
+  color: #b9b9b9;
+  padding: 9rem 7rem 3rem 7rem;
+}
+
+footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer #logo-text-footer {
+  font-size: 4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 25%;
+  float: left;
+}
+
+footer #copyright {
+  width: 75%;
+  float: left;
+  font-size: 1.2rem;
+}
+
+footer #copyright p:first-child {
+  margin-bottom: 20px;
+  word-break: break-all;
+  text-align: justify;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-column-rule-style: solid;
+          column-rule-style: solid;
+  -webkit-column-rule-width: 1px;
+          column-rule-width: 1px;
+  -webkit-column-rule-color: #888;
+          column-rule-color: #888;
+  -webkit-column-width: 1rem;
+          column-width: 1rem;
+}
 /*# sourceMappingURL=index.css.map */
