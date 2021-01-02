@@ -1,0 +1,50 @@
+.btn {
+  font-size: 30px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  font-size: 50px;
+  text-decoration: underline;
+  opacity: 0.2;
+}
+
+@-webkit-keyframes anim1 {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(100px, -30px);
+            transform: translate(100px, -30px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(100px, -30px);
+            transform: translate(100px, -30px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+#box1 {
+  -webkit-animation-name: anim1;
+          animation-name: anim1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=anim_trans.css.map */
