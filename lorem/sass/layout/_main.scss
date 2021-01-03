@@ -1,17 +1,32 @@
 main {
   @include clearfix();
+
   #section-about {
     width: 66.66666%;
     min-height: 42rem;
     float: left;
     background-color: #ededed;
     padding: 7rem 0 6.5rem 6rem;
+
     @include clearfix();
+    @include mq("small-screen-1") {
+      width: 100%;
+    }
+    @include mq("small-screen-2") {
+      width: 100%;
+      height: 54rem;
+      padding: 7rem 6rem 6.5rem 6rem;
+    }
 
     &-words {
       width: 65%;
       float: left;
       padding: 2rem 2rem 0 0;
+
+      @include mq("small-screen-2") {
+        width: 100%;
+      }
+
       p {
         padding: 1.5rem 0;
         font-size: 1.4rem;
@@ -24,12 +39,19 @@ main {
       float: left;
       position: relative;
 
+      @include mq("small-screen-2") {
+        width: 100%;
+      }
+
       .photo {
         position: absolute;
         width: 18rem;
         height: 12rem;
         transition: all 0.5s;
 
+        @include mq("small-screen-2") {
+          top: 3rem !important;
+        }
         &:hover {
           transform: scale(1.1);
           padding: 1rem;
@@ -58,11 +80,29 @@ main {
   #section-etc {
     width: 33.333334%;
     float: left;
+
+    @include mq("samll-screen-1") {
+      width: 100%;
+    }
+    @include mq("small-screen-2") {
+      width: 100%;
+    }
+
     [id^="etc-"] {
       height: 14rem;
     }
 
     .etc {
+      @include mq("small-screen-1") {
+        width: 33.33333%;
+        float: left;
+      }
+      @include mq("small-screen-2") {
+        width: 33.33333%;
+        height: 22rem;
+        float: left;
+      }
+
       &:first-child {
         background-color: $color-blue-1;
       }

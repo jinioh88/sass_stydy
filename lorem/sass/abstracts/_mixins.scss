@@ -5,3 +5,15 @@
     clear: both;
   }
 }
+
+@mixin mq($screen-width) {
+  @if $screen-width == "samll-screen-1" {
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $screen-width == "samll-screen-2" {
+    @media screen and (min-width: 701px) and (max-width: 899px) {
+      @content;
+    }
+  }
+}
